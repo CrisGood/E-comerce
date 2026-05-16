@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos | Master Luxury Fragrance</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- A-Frame VR -->
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1 class="logo">Cristian Master Luxury</h1>
+    <p class="tagline">Elegancia y distinción en cada gota</p>
+</header>
+
+<!-- NAV -->
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="productos.html" class="active">Productos</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="mi-cuenta.html">Mi Cuenta</a>
+</nav>
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-overlay">
+            <h2>NUESTRA COLECCIÓN</h2>
+            <p>Descubre fragancias exclusivas que elevan tu estilo.</p>
+        </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="perfumes-3d">
+
+        <h2>Galería 3D de Productos</h2>
+
+        <p>
+            Explora todas las imágenes de las carpetas <strong>fotos</strong> e <strong>iconos</strong>.
+            Aquí verás cada imagen disponible.
+        </p>
+
+        <div class="perfume-container">
+
+            <div class="perfume-item">
+                <img src="fotos/perfume boss.png" alt="Perfume Boss 3D">
+                <h3>Boss Intense</h3>
+                <p>Elegancia en 3D</p>
+            </div>
+
+            <div class="perfume-item">
+                <img src="fotos/perfume sauvage.png" alt="Perfume Sauvage 3D">
+                <h3>Sauvage</h3>
+                <p>Fragancia icónica</p>
+            </div>
+
+            <div class="perfume-item">
+                <img src="fotos/perfume versace.png" alt="Perfume Versace 3D">
+                <h3>Versace</h3>
+                <p>Distinción moderna</p>
+            </div>
+
+            <div class="perfume-item">
+                <img src="iconos/1.jpg" alt="Icono 1">
+                <h3>Icono 1</h3>
+                <p>Imagen premium</p>
+            </div>
+
+            <div class="perfume-item">
+                <img src="iconos/2.jpg" alt="Icono 2">
+                <h3>Icono 2</h3>
+                <p>Estilo destacado</p>
+            </div>
+
+            <div class="perfume-item">
+                <img src="iconos/3.jpg" alt="Icono 3">
+                <h3>Icono 3</h3>
+                <p>Elegancia visual</p>
+            </div>
+
+            <div class="perfume-item">
+                <img src="iconos/4.jpg" alt="Icono 4">
+                <h3>Icono 4</h3>
+                <p>Lujo en detalle</p>
+            </div>
+
+            <div class="perfume-item">
+                <img src="iconos/2204_w018_n001_957b_p15_957.jpg" alt="Icono Especial">
+                <h3>Icono Especial</h3>
+                <p>Exclusividad total</p>
+            </div>
+
+            <div class="perfume-item">
+                <img src="iconos/oro supremo.png" alt="Oro Supremo">
+                <h3>Oro Supremo</h3>
+                <p>Belleza con brillo</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MODELOS GLB -->
+    <section class="glb-modelos">
+
+        <h2>Modelos 3D (.glb)</h2>
+
+        <p>
+            Presentamos los modelos en formato <strong>.glb</strong> disponibles en la carpeta <strong>iconos</strong>.
+            Puedes visualizar cada uno directamente en 3D aquí.
+        </p>
+
+        <div class="perfume-container">
+
+            <div class="perfume-item">
+                <h3>Perfume Bottle</h3>
+                <a-scene embedded style="width: 280px; height: 280px; background: #111;">
+                    <a-assets>
+                        <a-asset-item id="glbModel1" src="iconos/Perfume bottle.glb"></a-asset-item>
+                    </a-assets>
+                    <a-entity
+                        gltf-model="#glbModel1"
+                        scale="0.4 0.4 0.4"
+                        position="0 -0.7 0"
+                        rotation="0 45 0"
+                        animation="property: rotation;
+                            to: 0 405 0;
+                            loop: true;
+                            dur: 25000;
+                            easing: linear">
+                    </a-entity>
+                    <a-entity camera position="0 0 2"></a-entity>
+                    <a-entity light="type: ambient; color: #bbb"></a-entity>
+                    <a-entity light="type: directional; intensity: 0.8; position: 1 1 1;"></a-entity>
+                </a-scene>
+                <p>Perfume Bottle</p>
+            </div>
+
+            <div class="perfume-item">
+                <h3>Antique Perfume</h3>
+                <a-scene embedded style="width: 280px; height: 280px; background: #111;">
+                    <a-assets>
+                        <a-asset-item id="glbModel2" src="iconos/pixellabs-antique-perfume-bottle-3d-2867.glb"></a-asset-item>
+                    </a-assets>
+                    <a-entity
+                        gltf-model="#glbModel2"
+                        scale="0.4 0.4 0.4"
+                        position="0 -0.7 0"
+                        rotation="0 30 0"
+                        animation="property: rotation;
+                            to: 0 390 0;
+                            loop: true;
+                            dur: 26000;
+                            easing: linear">
+                    </a-entity>
+                    <a-entity camera position="0 0 2"></a-entity>
+                    <a-entity light="type: ambient; color: #bbb"></a-entity>
+                    <a-entity light="type: directional; intensity: 0.8; position: 1 1 1;"></a-entity>
+                </a-scene>
+                <p>Antique Perfume</p>
+            </div>
+
+            <div class="perfume-item">
+                <h3>Texture Bottle</h3>
+                <a-scene embedded style="width: 280px; height: 280px; background: #111;">
+                    <a-assets>
+                        <a-asset-item id="glbModel3" src="iconos/pixellabs-glb-4060.glb"></a-asset-item>
+                    </a-assets>
+                    <a-entity
+                        gltf-model="#glbModel3"
+                        scale="0.4 0.4 0.4"
+                        position="0 -0.7 0"
+                        rotation="0 25 0"
+                        animation="property: rotation;
+                            to: 0 385 0;
+                            loop: true;
+                            dur: 27000;
+                            easing: linear">
+                    </a-entity>
+                    <a-entity camera position="0 0 2"></a-entity>
+                    <a-entity light="type: ambient; color: #bbb"></a-entity>
+                    <a-entity light="type: directional; intensity: 0.8; position: 1 1 1;"></a-entity>
+                </a-scene>
+                <p>Texture Bottle</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- VR -->
+    <section class="vr-section">
+
+        <div class="vr-card">
+
+            <h2>Experiencia de Realidad Virtual</h2>
+
+            <p>
+                Adéntrate en un universo donde cada fragancia cobra vida 
+                en formas, colores y movimiento.
+                Vive la esencia de nuestros perfumes como nunca antes,
+                en un entorno 3D envolvente.
+            </p>
+
+            <a-scene
+                embedded
+                vr-mode-ui="enabled: true"
+                background="color: #000"
+                class="vr-scene">
+
+                <!-- ASSETS -->
+                <a-assets>
+
+                    <img id="texture1" src="iconos/1.jpg">
+                    <img id="texture2" src="iconos/2.jpg">
+                    <img id="texture3" src="iconos/3.jpg">
+                    <img id="texture4" src="iconos/4.jpg">
+                    <img id="texture5" src="iconos/27963.jpg">
+                    <img id="texture6" src="iconos/2204_w018_n001_957b_p15_957.jpg">
+                    <img id="texture7" src="iconos/oro supremo.png">
+
+                    <img id="bossTexture" src="fotos/perfume boss.png">
+                    <img id="sauvageTexture" src="fotos/perfume sauvage.png">
+                    <img id="versaceTexture" src="fotos/perfume versace.png">
+
+                    <a-asset-item id="modelPerfumeBoss" src="iconos/Perfume bottle.glb"></a-asset-item>
+                    <a-asset-item id="modelAntique" src="iconos/pixellabs-antique-perfume-bottle-3d-2867.glb"></a-asset-item>
+                    <a-asset-item id="modelTexture" src="iconos/pixellabs-glb-4060.glb"></a-asset-item>
+
+                </a-assets>
+
+                <!-- SKY -->
+                <a-sky color="#0a0a0a"></a-sky>
+
+                <!-- LIGHTS -->
+                <a-entity
+                    light="type: ambient; color: #555">
+                </a-entity>
+
+                <a-entity
+                    light="type: spot;
+                    intensity: 1.5;
+                    position: 0 4 2;
+                    angle: 30;
+                    penumbra: 0.5;
+                    color: #ffd700">
+                </a-entity>
+
+                <a-entity
+                    light="type: point;
+                    intensity: 0.8;
+                    position: 2 3 -1;
+                    color: #fff">
+                </a-entity>
+
+                <!-- FLOOR -->
+                <a-plane
+                    rotation="-90 0 0"
+                    width="20"
+                    height="20"
+                    color="#111"
+                    material="roughness: 1"
+                    position="0 0 0">
+                </a-plane>
+
+                <!-- CAMERA -->
+                <a-entity
+                    camera
+                    look-controls
+                    position="0 1.7 5">
+                </a-entity>
+
+                <!-- OBJETOS -->
+
+                <a-entity
+                    geometry="primitive: plane; width: 1.6; height: 1.2"
+                    material="src: #texture1; side: double"
+                    position="-2 1.2 -3"
+                    rotation="0 20 0"
+                    animation="property: rotation;
+                    to: 0 -360 0;
+                    loop: true;
+                    dur: 25000;
+                    easing: linear">
+                </a-entity>
+
+                <a-entity
+                    geometry="primitive: plane; width: 1.6; height: 1.2"
+                    material="src: #texture2; side: double"
+                    position="2 1.2 -3"
+                    rotation="0 -20 0"
+                    animation="property: rotation;
+                    to: 0 360 0;
+                    loop: true;
+                    dur: 26000;
+                    easing: linear">
+                </a-entity>
+
+                <a-entity
+                    geometry="primitive: plane; width: 1.6; height: 1.2"
+                    material="src: #texture3; side: double"
+                    position="0 2 -4"
+                    animation="property: rotation;
+                    to: 360 0 0;
+                    loop: true;
+                    dur: 30000;
+                    easing: easeInOutSine">
+                </a-entity>
+
+                <a-entity
+                    geometry="primitive: sphere; radius: 0.36"
+                    material="src: #texture7;
+                    metalness: 0.5;
+                    roughness: 0.3"
+                    position="0 0.9 -3.1"
+                    animation="property: rotation;
+                    to: 0 360 0;
+                    loop: true;
+                    dur: 28000;
+                    easing: easeInOutSine">
+                </a-entity>
+
+                <a-entity
+                    geometry="primitive: box;
+                    depth: 0.5;
+                    height: 1.3;
+                    width: 0.6"
+                    material="src: #texture6;
+                    metalness: 0.5;
+                    roughness: 0.4"
+                    position="-0.8 0.85 -2.8"
+                    animation="property: rotation;
+                    to: 0 -360 0;
+                    loop: true;
+                    dur: 30000;
+                    easing: easeInOutSine">
+                </a-entity>
+
+                <a-entity
+                    geometry="primitive: cylinder;
+                    radius: 0.35;
+                    height: 1.4"
+                    material="src: #versaceTexture;
+                    metalness: 0.4;
+                    roughness: 0.5"
+                    position="0.8 0.8 -2.8"
+                    animation="property: rotation;
+                    to: 0 360 0;
+                    loop: true;
+                    dur: 32000;
+                    easing: easeInOutSine">
+                </a-entity>
+
+                <a-entity
+                    gltf-model="#modelPerfumeBoss"
+                    scale="0.7 0.7 0.7"
+                    position="-2 0.3 -3"
+                    rotation="0 45 0"
+                    animation="property: rotation;
+                    to: 0 405 0;
+                    loop: true;
+                    dur: 22000;
+                    easing: linear">
+                </a-entity>
+
+                <a-entity
+                    gltf-model="#modelAntique"
+                    scale="0.45 0.45 0.45"
+                    position="2 0.3 -3"
+                    rotation="0 -45 0"
+                    animation="property: rotation;
+                    to: 0 -405 0;
+                    loop: true;
+                    dur: 23000;
+                    easing: linear">
+                </a-entity>
+
+                <a-entity
+                    gltf-model="#modelTexture"
+                    scale="0.5 0.5 0.5"
+                    position="0 0.3 -2"
+                    rotation="0 20 0"
+                    animation="property: rotation;
+                    to: 0 365 0;
+                    loop: true;
+                    dur: 24000;
+                    easing: linear">
+                </a-entity>
+
+                <!-- TEXTO VR -->
+                <a-entity position="0 1.2 -1.5">
+
+                    <a-text
+                        value="Explora nuestras fragancias en VR"
+                        color="#ffd700"
+                        align="center"
+                        width="6"
+                        font="mozillavr">
+                    </a-text>
+
+                </a-entity>
+
+            </a-scene>
+
+            <!-- BOTÓN -->
+            <a href="productos.html" class="btn-primary">
+                Explorar en VR
+            </a>
+
+            <p class="vr-note">
+                Activa el modo VR en dispositivos compatibles
+                o navega el espacio 3D con tu ratón.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- PRODUCTOS DINÁMICOS -->
+    <section class="productos-dinamicos">
+
+        <h2>Productos dinámicos</h2>
+
+        <p>
+            Más fragancias agregadas automáticamente desde la colección,
+            con fotos y precios nuevos.
+        </p>
+
+        <div class="productos-grid" id="contenedor-productos-dinamicos">
+
+            <div class="perfume-item">
+                <img src="fotos/perfume boss.png" alt="Boss Intense">
+                <h3>Boss Intense</h3>
+                <p>$85.00</p>
+            </div>
+
+            <div class="perfume-item">
+                <img src="fotos/perfume sauvage.png" alt="Sauvage">
+                <h3>Sauvage</h3>
+                <p>$95.00</p>
+            </div>
+
+            <div class="perfume-item">
+                <img src="fotos/perfume versace.png" alt="Versace">
+                <h3>Versace</h3>
+                <p>$99.00</p>
+            </div>
+
+            <div class="perfume-item">
+                <img src="iconos/1.jpg" alt="Luxury Gold">
+                <h3>Luxury Gold</h3>
+                <p>$49.99</p>
+            </div>
+
+            <div class="perfume-item">
+                <img src="iconos/2.jpg" alt="Velvet Noir">
+                <h3>Velvet Noir</h3>
+                <p>$54.99</p>
+            </div>
+
+            <div class="perfume-item">
+                <img src="iconos/3.jpg" alt="Diamond Essence">
+                <h3>Diamond Essence</h3>
+                <p>$64.99</p>
+            </div>
+
+            <div class="perfume-item">
+                <img src="iconos/4.jpg" alt="Crystal Bloom">
+                <h3>Crystal Bloom</h3>
+                <p>$69.99</p>
+            </div>
+
+            <div class="perfume-item">
+                <img src="iconos/27963.jpg" alt="Radiant Aura">
+                <h3>Radiant Aura</h3>
+                <p>$74.99</p>
+            </div>
+
+            <div class="perfume-item">
+                <img src="iconos/2204_w018_n001_957b_p15_957.jpg" alt="Edición Especial">
+                <h3>Edición Especial</h3>
+                <p>$89.99</p>
+            </div>
+
+            <div class="perfume-item">
+                <img src="iconos/oro supremo.png" alt="Oro Supremo">
+                <h3>Oro Supremo</h3>
+                <p>$79.99</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PRODUCTOS POSTGRES -->
+    <section class="productos-section">
+
+        <div class="productos-grid" id="contenedor-productos">
+
+            <!-- Productos desde PostgreSQL -->
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="social-links">
+
+        <a href="https://github.com/CrisGood/E-comerce" target="_blank">
+            GitHub
+        </a>
+
+        <a href="https://linkedin.com/" target="_blank">
+            LinkedIn
+        </a>
+
+    </div>
+
+    <p>
+        &copy; 2026 Master Luxury Fragrance.
+        Todos los derechos reservados.
+    </p>
+
+</footer>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
