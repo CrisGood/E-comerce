@@ -1,0 +1,451 @@
+/* VARIABLES */
+:root {
+    --gold: #D4AF37;
+    --dark: #0F0F0F;
+    --card-bg: #1A1A1A;
+    --white: #FFFFFF;
+    --gray: #888888;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--dark);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+/* HEADER & LOGO */
+header {
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: var(--gold);
+    margin: 0;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.tagline {
+    color: var(--gray);
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+/* NAVEGACIÓN */
+nav {
+    display: flex;
+    justify-content: center;
+    background: rgba(10, 10, 10, 0.95);
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 25px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: var(--gold);
+}
+
+/* HERO SECTION */
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('imagenes/moda.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero video {
+    max-width: 70%;
+    max-height: 50vh;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+}
+
+/* PERFUMES 3D SECTION */
+.perfumes-3d {
+    padding: 80px 10%;
+    text-align: center;
+    background: var(--dark);
+}
+
+.perfumes-3d h2 {
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.perfume-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    perspective: 1000px;
+}
+
+.perfume-item {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.perfume-item img {
+    width: 200px;
+    height: 300px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.perfume-item h3 {
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .perfume-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.65fr) minmax(320px, 1fr);
+    gap: 30px;
+    padding: 40px 60px;
+    align-items: start;
+}
+
+.registro-section {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login-section {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.registro-box {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 4px;
+    border: 1px solid #222;
+    width: min(100%, 380px);
+}
+
+.login-message {
+    margin: 0 0 15px;
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+    .home-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .registro-panel {
+        justify-content: center;
+    }
+}
+
+/* PRODUCTOS SECTION */
+.productos-section {
+    padding: 80px 10%;
+}
+
+.productos-dinamicos {
+    padding: 60px 10%;
+    background: #090909;
+    text-align: center;
+}
+
+.productos-dinamicos h2,
+.productos-dinamicos p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 760px;
+}
+
+.productos-dinamicos p {
+    color: var(--gray);
+    margin-bottom: 40px;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+
+.productos-grid .card {
+    min-height: 420px;
+}
+
+.perfumes-3d {
+    padding: 80px 10%;
+    background: linear-gradient(180deg, rgba(15,15,15,1) 0%, rgba(25,25,25,1) 100%);
+    text-align: center;
+}
+
+.perfumes-3d p {
+    max-width: 680px;
+    margin: 0 auto 45px;
+    color: var(--gray);
+}
+
+.vr-section {
+    padding: 80px 10%;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.vr-card {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px;
+    background: rgba(26, 26, 26, 0.95);
+    border-radius: 18px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.vr-card h2 {
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+}
+
+.vr-card p {
+    color: var(--gray);
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.vr-scene {
+    width: 100%;
+    height: 480px;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.vr-note {
+    color: var(--white);
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
+
+.perfume-item {
+    background: var(--card-bg);
+    border-radius: 18px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    transform-style: preserve-3d;
+    box-shadow: 0 14px 35px rgba(0,0,0,0.35);
+}
+
+.perfume-item:hover {
+    transform: translateY(-10px) rotateY(5deg);
+    box-shadow: 0 25px 55px rgba(0,0,0,0.45);
+}
+
+.perfume-item img {
+    width: 240px;
+    height: 320px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    transition: transform 0.4s ease;
+}
+
+.perfume-item:hover img {
+    transform: translateZ(20px) scale(1.02);
+}
+
+.perfume-item h3 {
+    color: var(--white);
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+}
+
+.perfume-item p {
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+.perfume-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    perspective: 1200px;
+}
+
+@media (max-width: 1024px) {
+    .perfume-item img {
+        width: 200px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .perfume-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* CONTACTO SECTION */
+.contacto-section {
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px;
+}
+
+/* CONSTRUCCION SECTION */
+.construccion-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.container-construccion h1 {
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.container-construccion p {
+    color: var(--white);
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 4px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid #222;
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+    transform: rotateY(10deg) rotateX(5deg) translateY(-10px);
+    border-color: var(--gold);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.producto-img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    background: #fff; /* Fondo blanco para resaltar el perfume */
+    padding: 10px;
+    border-radius: 4px;
+    transform: translateZ(30px); /* Efecto 3D */
+}
+
+/* FORMULARIOS */
+.login-container, .contacto-box {
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px;
+}
+
+.login-box, .contacto-box {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 2px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #222;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    background: #000;
+    border: 1px solid #333;
+    color: white;
+    box-sizing: border-box;
+}
+
+/* BOTONES */
+.btn-gold, .btn {
+    background: var(--gold);
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    width: 100%;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-gold:hover, .btn:hover {
+    background: var(--white);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 60px 20px;
+    border-top: 1px solid #222;
+    margin-top: 50px;
+}
+
+.social-links a {
+    color: var(--gold);
+    margin: 0 15px;
+    text-decoration: none;
+}

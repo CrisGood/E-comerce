@@ -1,0 +1,11 @@
+# Ignorar archivos del sistema y temporales
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Liberar archivos de editor
+*.swp
+*.swo
+*~
